@@ -11,6 +11,16 @@ contract Contador {
         valor++;
         emit Tic("Actualizado", valor);
     }
+
+    function decr() public {
+        valor--;
+        emit Tic("Actualizado", valor);
+    }
+    
+        function decr() public {
+        valor--;
+        emit Tic("Actualizado", valor);
+    }
     
     receive() external payable { 
         revert(); 
