@@ -1,0 +1,21 @@
+
+Autores:
+
+Carlos Aznar
+Salomón Fereres
+Adrián Blázquez
+
+Tareas:
+
+1. [ ] Modificar Contador.sol
+
+2. [ ] Tests
+
+- decr
+- reset
+
+3. [ ] Dos botones
+
+Instrucciones
+
+1. Clonar el proyecto
