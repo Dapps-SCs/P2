@@ -9,17 +9,17 @@ contract Contador {
         
     function incr() public {
         valor++;
-        emit Tic("Actualizado", valor);
+        emit Tic("Incrementar", valor);
     }
 
     function decr() public {
         valor--;
-        emit Tic("Actualizado", valor);
+        emit Tic("Decrementar", valor);
     }
     
-        function decr() public {
+    function reset() public {
         valor--;
-        emit Tic("Actualizado", valor);
+        emit Tic("Reset", valor);
     }
     
     receive() external payable { 
