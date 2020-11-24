@@ -1,4 +1,4 @@
-# P2: se añade y se teste la funcionalidad de decr() y reset()
+# P2: se añade y se testea las funcionalidades de decr() y reset()
 
 ## Autores:
 
@@ -16,7 +16,26 @@ Client <-> Business Logic
 
 En este ejemplo, ¿qué archivo hace qué función en la arquitectura?
 
- <-> Contador.sol
+ dapp (app.js + index.html) <-> Web3 <-> Contador.sol
+
+¿Dónde se despliega cada uno?
+
+Serve + truffle + ganache
+
+1. instalo ganache e inicializo un workspace con el trufle.config.js
+
+2. Instalo truffle y comrpeubo la versión; enotnces compilo el contrato y lo migro
+```
+npm install truffle 
+npx install truffle
+```
+
+```
+npx truffle compile
+npx truffle migrate
+```
+
+3. Instalo serve
 
 1. [ ] Modificar Contador.sol
 
