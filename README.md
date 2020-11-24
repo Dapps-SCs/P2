@@ -27,12 +27,12 @@ Serve + truffle + ganache
 2. Instalo truffle y comrpeubo la versión; enotnces compilo el contrato y lo migro
 ```
 npm install truffle 
-npx install truffle
+npx truffle version
 ```
 
 ```
-npx truffle compile
-npx truffle migrate
+npx truffle compile --all
+npx truffle migrate --reset
 ```
 
 3. Instalo serve
