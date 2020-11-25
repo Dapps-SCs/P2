@@ -6,9 +6,16 @@ Carlos Aznar
 Salomón Fereres
 Adrián Blázquez
 
+A. Tareas.
+0. Análisis y diseño
+1. [ ] Modificar Contador.sol
+2. [ ] Tests
+3. [ ] Dos botones y dos manejadores
+B. Demo de la feature
+
 ## Tareas:
 
-0. Inicio:
+0. Análisis y diseño
 
 ¿Qué arquitectura presenta la aplicación?
 
@@ -172,10 +179,12 @@ Se estalbecen ciertos enlaces simbólicos para no tener que actualizar las libre
 
 ```
 cd dapp/js
-ln -fs ../../node_modules/truffle_contract/dist/truffle_contract.min.js dapp/js
-ln -fs ../build/contracts dapp 
-npx server -S dapp
+ln -fs ../../node_modules/truffle-contract/dist/truffle-contract.min.js dapp/js
+ln -fs ../build/contracts ..
+npx serve -S dapp
 ```
+
+Se instala metamask
 
 1. [ ] Modificar Contador.sol
 
@@ -196,8 +205,113 @@ npx server -S dapp
 - decr
 - reset
 
-3. [ ] Dos botones
+```
+    it("decrementar en uno el contador", () => {
 
-Instrucciones
+    let c1, c2;
 
-1. Clonar el proyecto
+    return contador.valor.call()
+    .then(value => {
+      c1 = value;
+      return contador.decr(); 
+    })
+    .then(() => contador.valor.call() )
+    .then(value => {
+      c2 = value;
+
+      const decremento = c2.sub(c1);
+      assert.equal(decremento.toNumber(), 1, "El decremento del valor no es 1.");
+    });
+  });
+  
+  it("decrementa en cuatro el contador", async () => {
+
+    let c1 = await contador.valor.call();
+    await contador.decr(); 
+    await contador.decr(); 
+    await contador.decr(); 
+    await contador.decr(); 
+    let c2 = await contador.valor.call();
+ 
+    const decremento = c2.sub(c1);
+    assert.equal(decremento.toNumber(), 4, "El decremento del valor no es 4.");
+  });
+  
+    it("resetea el contador", async () => {
+
+    let c1 = await contador.valor.call();
+    await contador.reset(); 
+ 
+    const valor = await contador.valor.call();
+    assert.equal(valor.toNumber(), 0, "El valor no es 0.");
+  });
+```
+
+Output:
+
+
+
+3. [ ] Dos botones y dos manejadores
+
+En index.html
+
+```
+    <button type="button" id="cincr">Incrementar</button>
+    <button type="button" id="cdecr">Decrementar</button>
+    <button type="button" id="creset">Reset</button>
+```
+En app.js
+
+```
+        // Manejador del botón de decremento.
+    handleDecr: async event => { 
+        console.log("Se ha hecho Click en el botón.");
+
+        event.preventDefault();
+
+        try {
+            const accounts = await App.web3.eth.getAccounts();
+            const account = accounts[0];
+
+            if (!account) {
+               alert('No se puede acceder a las cuentas de usuario.');
+               return;
+            }
+            console.log("Cuenta =", account);
+
+            // Ejecutar incr como una transacción desde la cuenta account.
+            await App.contador.decr({from: account, gas: 200000});
+        } catch(error) {
+            console.log(error.message || error);
+        }
+    },
+    
+    // Manejador del botón de reset.
+    handleDecr: async event => { 
+        console.log("Se ha hecho Click en el botón.");
+
+        event.preventDefault();
+
+        try {
+            const accounts = await App.web3.eth.getAccounts();
+            const account = accounts[0];
+
+            if (!account) {
+               alert('No se puede acceder a las cuentas de usuario.');
+               return;
+            }
+            console.log("Cuenta =", account);
+
+            // Ejecutar incr como una transacción desde la cuenta account.
+            await App.contador.reset({from: account, gas: 200000});
+        } catch(error) {
+            console.log(error.message || error);
+        }
+    },
+```
+
+
+
+![]()
+
+
