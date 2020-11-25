@@ -18,7 +18,7 @@ contract Contador {
     }
     
     function reset() public {
-        valor--;
+        valor = 0;
         emit Tic("Reset", valor);
     }
     
