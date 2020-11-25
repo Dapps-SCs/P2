@@ -36,7 +36,7 @@ npx truffle migrate --reset
 npx truffle test
 ```
 Output:
-
+```
 PS C:\Users\ablaz\PycharmProjects\BCDA\P2> npx truffle version                                                          Truffle v5.1.54 (core: 5.1.54)
 Solidity - 0.7.4 (solc-js)
 Node v12.16.1
@@ -151,13 +151,21 @@ Compiling your contracts...
 
 
   6 passing (17s)
+```
 
 c. Instalo las librerías necesrias para cliente y conecto con enlaces simbólicos las librerías
 
 ```
 npm install web3 truffle-contract serve
-npx server -S dapp
 
+```
+Se estalbecen ciertos enlaces simbólicos para no tener que actualizar las librerías
+
+```
+cd dapp/js
+ln ../../node_modules/truffle_contract/dist/truffle_contract.min.js dapp/js
+
+npx server -S dapp
 ```
 
 1. [ ] Modificar Contador.sol
