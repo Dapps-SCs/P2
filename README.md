@@ -8,9 +8,13 @@ Adrián Blázquez
 
 Demo de la feature:
 
-[![Demo de la feature](https://img.youtube.com/vi/3X_pqKg6xyM/0.jpg)](https://www.youtube.com/watch?v=3X_pqKg6xyM)
+[![Demo de la feature](https://img.youtube.com/vi/N3QMxlImmXQ/0.jpg)](https://www.youtube.com/watch?v=N3QMxlImmXQ)
 
-De sarrollo de cada requisito:
+Setup del sistema:
+
+
+
+Desarrollo de cada requisito:
 
 0. Análisis y diseño
 1. 
