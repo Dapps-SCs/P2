@@ -76,6 +76,8 @@ App = {
             const matchEvent = (ev, sel) => ev.target.matches(sel);
             document.addEventListener('click', ev => {
               if (matchEvent(ev, '#cincr')) App.handleIncr(ev);
+              if (matchEvent(ev, '#creset')) App.handleReset(ev);
+              if (matchEvent(ev, '#cdecr')) App.handleDecr(ev);
               else if (matchEvent(ev, '#login')) App.handleLogin(ev);
             });
 
@@ -156,7 +158,7 @@ App = {
     },
     
     // Manejador del botón de reset.
-    handleDecr: async event => { 
+    handleReset: async event => {
         console.log("Se ha hecho Click en el botón.");
 
         event.preventDefault();

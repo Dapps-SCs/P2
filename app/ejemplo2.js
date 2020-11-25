@@ -5,7 +5,7 @@
 
 console.log("Ejemplo APP");
 
-const Web3 = require("Web3");
+const Web3 = require("web3");
 const TruffleContract = require("truffle-contract");
 
 // Instancia de Web3

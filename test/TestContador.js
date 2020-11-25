@@ -54,7 +54,7 @@ contract('Usamos un Contador:', accounts => {
     .then(value => {
       c2 = value;
 
-      const decremento = c2.sub(c1);
+      const decremento = c1.sub(c2);
       assert.equal(decremento.toNumber(), 1, "El decremento del valor no es 1.");
     });
   });
@@ -86,7 +86,7 @@ contract('Usamos un Contador:', accounts => {
     await contador.decr(); 
     let c2 = await contador.valor.call();
  
-    const decremento = c2.sub(c1);
+    const decremento = c1.sub(c2);
     assert.equal(decremento.toNumber(), 4, "El decremento del valor no es 4.");
   });
   
