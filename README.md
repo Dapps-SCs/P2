@@ -6,11 +6,19 @@ Carlos Aznar
 Salomón Fereres
 Adrián Blázquez
 
-A. Tareas.
+Demo de la feature:
+
+![]()
+
+De sarrollo de cada requisito:
+
 0. Análisis y diseño
-1. [ ] Modificar Contador.sol
-2. [ ] Tests
-3. [ ] Dos botones y dos manejadores
+1. 
+- [x] Modificar Contador.sol
+2.
+- [x] Tests
+3.
+- [x] Dos botones y dos manejadores
 B. Demo de la feature
 
 ## Tareas:
@@ -186,7 +194,7 @@ npx serve -S dapp
 
 Se instala metamask
 
-1. [ ] Modificar Contador.sol
+1. Modificar Contador.sol
 
 ```
     function decr() public {
@@ -200,7 +208,7 @@ Se instala metamask
     }
 ```
 
-2. [ ] Tests
+2. Tests
 
 - decr
 - reset
@@ -251,7 +259,7 @@ Output:
 
 
 
-3. [ ] Dos botones y dos manejadores
+3. Dos botones y dos manejadores
 
 En index.html
 
@@ -311,7 +319,5 @@ En app.js
 ```
 
 
-
-![]()
 
 
