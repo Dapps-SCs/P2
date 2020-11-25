@@ -59,6 +59,24 @@ contract('Usamos un Contador:', accounts => {
     });
   });
   
+    it("incrementa en 8 el contador", async () => {
+
+    let c1 = await contador.valor.call();
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr(); 
+    await contador.incr(); 
+      
+    let c2 = await contador.valor.call();
+ 
+    const incr = c2.sub(c1);
+    assert.equal(incr.toNumber(), 8, "El incremento del valor no es 4.");
+  });
+  
   it("decrementa en cuatro el contador", async () => {
 
     let c1 = await contador.valor.call();
@@ -83,17 +101,6 @@ contract('Usamos un Contador:', accounts => {
 
 
 
-  it("incrementa en cuatro el contador", async () => {
 
-    let c1 = await contador.valor.call();
-    await contador.incr(); 
-    await contador.incr(); 
-    await contador.incr(); 
-    await contador.incr(); 
-    let c2 = await contador.valor.call();
- 
-    const incr = c2.sub(c1);
-    assert.equal(incr.toNumber(), 4, "El incremento del valor no es 4.");
-  });
 
 });
