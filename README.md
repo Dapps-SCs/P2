@@ -253,6 +253,41 @@ Se instala metamask
 
 Output:
 
+```
+aluche@aluche-VirtualBox:~/PycharmProjects/P2$ npx truffle test
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Compiling ./test/TestContador.sol
+> Compilation warnings encountered:
+
+    /home/aluche/PycharmProjects/P2/test/TestContador.sol: Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+
+> Artifacts written to /tmp/test--15398-Eqs0x0qpxMCb
+> Compiled successfully using:
+   - solc: 0.7.4+commit.3f05b770.Emscripten.clang
+
+
+
+  TestContador
+    ✓ testZero (400ms)
+    ✓ testIncr (403ms)
+
+  Contract: Usamos un Contador:
+    ✓ el valor inicial debe ser 0 (103ms)
+    ✓ el valor inicial debe ser 0 (51ms)
+    ✓ incrementar en uno el contador (256ms)
+    ✓ decrementar en uno el contador (225ms)
+    ✓ incrementa en 8 el contador (1111ms)
+    ✓ decrementa en cuatro el contador (995ms)
+    ✓ resetea el contador (488ms)
+
+
+  9 passing (30s)
+```
+
 
 
 3. Dos botones y dos manejadores
