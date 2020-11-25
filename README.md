@@ -30,6 +30,15 @@ npm install truffle
 npx truffle version
 ```
 
+Output
+```
+aluche@aluche-VirtualBox:~/PycharmProjects/P2$ npx truffle version
+Truffle v5.1.54 (core: 5.1.54)
+Solidity - 0.7.4 (solc-js)
+Node v10.19.0
+Web3.js v1.2.9
+```
+
 ```
 npx truffle compile --all
 npx truffle migrate --reset
@@ -163,12 +172,24 @@ Se estalbecen ciertos enlaces simbólicos para no tener que actualizar las libre
 
 ```
 cd dapp/js
-ln ../../node_modules/truffle_contract/dist/truffle_contract.min.js dapp/js
-
+ln -fs ../../node_modules/truffle_contract/dist/truffle_contract.min.js dapp/js
+ln -fs ../build/contracts dapp 
 npx server -S dapp
 ```
 
 1. [ ] Modificar Contador.sol
+
+```
+    function decr() public {
+        valor--;
+        emit Tic("Decrementar", valor);
+    }
+    
+    function reset() public {
+        valor = 0;
+        emit Tic("Reset", valor);
+    }
+```
 
 2. [ ] Tests
 
