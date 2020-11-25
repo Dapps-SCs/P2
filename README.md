@@ -188,8 +188,8 @@ Se estalbecen ciertos enlaces simbólicos para no tener que actualizar las libre
 ```
 cd dapp/js
 ln -fs ../../node_modules/truffle-contract/dist/truffle-contract.min.js dapp/js
-ln -fs ../build/contracts ..
-npx serve -S dapp
+ln -fs ../build/contracts .
+npx serve -S .
 ```
 
 Se instala metamask
