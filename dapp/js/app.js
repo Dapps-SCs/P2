@@ -131,6 +131,52 @@ App = {
             console.log(error.message || error);
         }
     },
+    
+        // Manejador del botón de decremento.
+    handleDecr: async event => { 
+        console.log("Se ha hecho Click en el botón.");
+
+        event.preventDefault();
+
+        try {
+            const accounts = await App.web3.eth.getAccounts();
+            const account = accounts[0];
+
+            if (!account) {
+               alert('No se puede acceder a las cuentas de usuario.');
+               return;
+            }
+            console.log("Cuenta =", account);
+
+            // Ejecutar incr como una transacción desde la cuenta account.
+            await App.contador.decr({from: account, gas: 200000});
+        } catch(error) {
+            console.log(error.message || error);
+        }
+    },
+    
+    // Manejador del botón de reset.
+    handleDecr: async event => { 
+        console.log("Se ha hecho Click en el botón.");
+
+        event.preventDefault();
+
+        try {
+            const accounts = await App.web3.eth.getAccounts();
+            const account = accounts[0];
+
+            if (!account) {
+               alert('No se puede acceder a las cuentas de usuario.');
+               return;
+            }
+            console.log("Cuenta =", account);
+
+            // Ejecutar incr como una transacción desde la cuenta account.
+            await App.contador.reset({from: account, gas: 200000});
+        } catch(error) {
+            console.log(error.message || error);
+        }
+    },
 
 
     // Refrescar el valor mostrado.
