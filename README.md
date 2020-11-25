@@ -61,10 +61,6 @@ npx truffle test
 ```
 Output:
 ```
-PS C:\Users\ablaz\PycharmProjects\BCDA\P2> npx truffle version                                                          Truffle v5.1.54 (core: 5.1.54)
-Solidity - 0.7.4 (solc-js)
-Node v12.16.1
-Web3.js v1.2.9
 PS C:\Users\ablaz\PycharmProjects\BCDA\P2> npx truffle compile --all
 
 Compiling your contracts...
