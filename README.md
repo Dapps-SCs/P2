@@ -6,13 +6,9 @@ Carlos Aznar
 Salomón Fereres
 Adrián Blázquez
 
-Demo de la feature:
+Demo de la feature (+setup inicial):
 
-[![Demo de la feature](https://img.youtube.com/vi/N3QMxlImmXQ/0.jpg)](https://www.youtube.com/watch?v=N3QMxlImmXQ)
-
-Setup del sistema:
-
-
+[![Demo de la feature](https://img.youtube.com/vi/nJxjArroNHY/0.jpg)](https://www.youtube.com/watch?v=nJxjArroNHY)
 
 Desarrollo de cada requisito:
 
